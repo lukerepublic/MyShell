@@ -16,8 +16,7 @@ course, bug-free.
 the writeup. However, allowing input from the cwd increases functionality and improves 
 the user experience. We are trying to mimic a real shell, after all. We stand by our 
 decision knowing that we have accomplished the point of the project, but went further 
-to create a well-rounded final result. We trust that our decision to fill in a gray 
-area in the instructions of this project will not result in a deduction of points.
+to create a well-rounded final result. 
 
 2. Input clean-up: The input line gets tokenized, trimmed, and counted before going 
 anywhere else. Global variable MAX_TOKENS is set and used often throughout the program.
