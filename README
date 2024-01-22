@@ -1,0 +1,41 @@
+Project III: My shell 🐚
+
+---------------------------
+Luke Fernandez  ::
+Matt Lara       ::   
+---------------------------
+
+Hello, we hope you find myshell intuitive, well-organized, and of
+course, bug-free.
+
+===== Design Choices ================================================================
+-------------------------------------------------------------------------------------
+
+1. First and Foremost: myshell allows input from the current working directory,
+(in addition to the three bin folders). Whether or not this is allowed is not clear in 
+the writeup. However, allowing input from the cwd increases functionality and improves 
+the user experience. We are trying to mimic a real shell, after all. We stand by our 
+decision knowing that we have accomplished the point of the project, but went further 
+to create a well-rounded final result. We trust that our decision to fill in a gray 
+area in the instructions of this project will not result in a deduction of points.
+
+2. Input clean-up: The input line gets tokenized, trimmed, and counted before going 
+anywhere else. Global variable MAX_TOKENS is set and used often throughout the program.
+
+3. Master Directory: The Master Directory is the heart of our program. All input gets 
+passed through this function and gets redirected to their expected targets. If the 
+end of the directory is reached, it can be assumed that there is a user error.
+
+4. Structure: You will notice that mysh.c is organized into sections relating to
+general functions. For example, there is a "built-in commands" section, a "redirection"
+section, and an "input proccessing" section, to name a few. A "helper function" section
+at the top of the program contains functions that many of the sections call often.
+
+5. Global Variables: char** tokens contains all of the tokens the user entered. This
+does not change until the while loop finishes that iteration. However, char** arguments 
+is changed everytime a <, >, or | symbol, is found. 'arguments' contains the active 
+argument list unique to the <, >, or | symbol that is being executed. Keeping a unique,
+global argument list allows us to easily pass it into execv() anywhere in the program.
+
+-------------------------------------------------------------------------------------
+
